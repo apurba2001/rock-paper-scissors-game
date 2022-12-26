@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock paper seasor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href=" https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="parent-container">
+    <header>ROCK PAPER SEASOR</header>
+        <div id="child" class="child start">
+         <div class="left-container">
+            <form action="post" id="input-form" onsubmit="event.preventDefault()">
+                <h2>Enter rounds</h2>
+                <div id="round-div">
+                    <input 
+                    type="number" id="round-input" 
+                    title="Enter how many rounds you want to play" 
+                    oninvalid="this.setCustomValidity('Please enter rounds here')"
+                    oninput="this.setCustomValidity('')"
+                    required>
+                </div>
+                <div id="play-div">
+                    <input type="submit" value="Play" id="play-btn" title="Click to start playing..">
+                </div>
+            </form>
+        </div>
+    <div class="container" id="start-class">
+        <div id="win-msg"></div>
+        <div class="right-container">
+        <span class="display" id="p"></span> <span class="display" id="c"></span>
+            <div class="display-box">
+                <div id="rounds">Round left : <span id="entered-r">0</span></div>
+                <div class="player" id="you">You</div> <div class="player" id="com">Com</div>
+                <span id="player-score">0</span>:<span id="computer-score">0</span>
+            </div>
+        <div id="final">
+        <div class="massage-box">
+            <div id="massage"></div>
+        </div>
+        <div class="choices">
+            <div class="hand" id="rock">
+                <img src="image/rock.png" >
+            </div>
+            <div class="hand" id="paper">
+                <img src="image/paper.png">
+            </div>
+            <div class="hand" id="seasor">
+                <img src="image/seasor.png">
+            </div>
+        </div>
+        <div id="footer">Make your move to start</div>
+        </div>
+        <div id="restart">Restart</div>
+        </div>
+        </div>
+        </div>
+        </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,395 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    transition: 0.1s;
+}
+body{
+   background-color: black;
+   height: 100vh;
+   justify-content: center;
+   text-align: center;
+   padding: px;
+}
+.container{
+   height: 91.3vh;
+   display: flex;
+   
+}
+.parent-container{
+   height: 100vh;
+   background-image: radial-gradient( circle 610px at 5.2% 51.6%,  rgba(5,8,114,1) 0%, rgba(7,3,53,1) 97.5% );
+   border-radius: 5px;
+   
+}
+header{
+   background-image: linear-gradient(to top, #7028e4 0%, #e5b2ca 100%);
+   color:rgb(255, 255, 255);
+   font-size: 35px;
+   font-weight: 600;
+   border-radius: 5px 5px 0px 0px ;
+   z-index: 1;
+}
+.massage-box{
+   height: 70px;
+   padding-top: 20px;
+   margin-top: 20px;
+}
+#massage{
+   color: rgb(255, 255, 255);
+   font-size: 40px;
+   font-weight: 500;
+   height: 70px;
+   display: none;
+   animation-name: massage-anim;
+   animation-duration: 0.5s;
+}
+.display-box{
+   background-color: white;
+   color: black;
+   height: 100px;
+   width: 200px;
+   padding: 0px 20px;
+   padding-top: 12px;
+   font-size: 50px;
+   text-align: center;
+   border-radius: 10px;
+   margin: 10px auto;
+   margin-top: 5px;
+   padding-bottom: 35px;
+   position: relative;
+   transition: 0.5s;
+}
+.player{
+   color: rgb(255, 255, 255);
+   font-size: 15px;
+   font-weight: 600;
+   background-color: rgb(149, 8, 250);
+   padding: 2px 12px;
+   border-radius: 5px;
+}
+
+#you{
+   position: absolute;
+   left: -25px;
+   bottom: 38%;
+}
+#com{
+   position: absolute;
+   right: -33px;
+   bottom: 38%;
+}
+.choices{
+   margin-top: 30px;
+}
+.choices .hand{
+   display: inline;
+   
+}
+img{
+   height: 200px;
+   cursor: pointer;
+   border-radius: 50%;
+   padding: 10px;
+   margin: 20px 0;
+   transition: 0.3s;
+}
+img:hover{
+   border: 5px solid rgb(12, 205, 244);
+}
+
+#footer{
+   color: rgb(225, 225, 225);
+   font-size: 30px;
+   font-weight: 500;
+   margin-top: 10px;
+   height: 50px;
+}
+.display{
+   display: none;
+   color: white;
+   background-color:rgb(97, 96, 96);
+   padding: 5px 20px;
+   font-size: 30px;
+   height: 60px;
+   width: 160px;
+   font-weight: 600;
+   border-radius: 10px;
+   transition: 0.3s;
+   justify-content:center;
+   align-items: center;
+}
+#p{
+   position: absolute;
+   left: 20%;
+   top: 22%;
+   animation-name: choice-anim;
+   animation-duration: 0.3s;
+}
+#c{
+   position: absolute;
+   right: 20%;
+   top: 22%;
+   animation-name: choice-anim;
+   animation-duration: 0.3s;
+}
+
+#restart{
+   color: white;
+   position: absolute;
+   bottom: 0px;
+   left: 50%;
+   transform: translate(-50%,-50%);
+   height: 50px;
+   width: 120px;
+   background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+   font-size: 25px;
+   padding-top: 5px;
+   font-weight: 500; 
+   border-radius: 50px;
+   transition: 0.3s;
+   display: none;
+   cursor: pointer;
+}
+#restart:active{
+   background-image: linear-gradient(-225deg, #AC32E4 0%, #7918F2 48%, #4801FF 100%);
+}
+.left-container{
+   width: 30%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   display: none;
+   overflow: hidden;
+}
+.right-container{
+   width: 100%;
+   padding-top: 15px;
+   position: relative;
+   overflow: hidden;
+   animation-name: containar-anim;
+   animation-duration: 0.5s;
+  
+}
+#round-div{
+   padding-top: 10px;
+   height: 80px;
+   width: 250px;
+
+}
+#round-input{
+   width:100%;
+   height: 80px;
+   border-radius: 50px;
+   border: none;
+   font-weight: 500;
+   margin-right: 50%;
+   border: 1px solid   rgb(137, 1, 228);
+   border-bottom: 1.5px solid rgb(137, 1, 228);
+   font-size: 45px;
+   transition: all 0.3s ease;
+   margin-bottom: 10px;
+   text-align: center;
+   color: white;
+   box-shadow: 0px 20px 50px -10px rgba(0, 0, 0, 0.7);
+   background-image: linear-gradient(to right, #434343 0%, black 100%);
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input:focus{
+   outline:none;
+   
+}
+
+#play-div{
+   margin-top: 100px;
+}
+#play-btn{
+   transition: 0.1s;
+   height: 120px;
+   width: 120px;
+   font-size:30px;
+   font-weight: 600;
+   border-radius: 50%;
+   border: none;
+   color: white;
+   cursor: pointer;
+   box-shadow: 0px 20px 50px -10px rgba(0, 0, 0, 0.7);
+   background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+}
+#play-btn:active{
+   height: 110px;
+   width: 110px;
+   background-image: linear-gradient(-225deg, #AC32E4 0%, #7918F2 48%, #4801FF 100%);
+}
+
+h2{
+   color: white;
+   font-weight: 600;
+   font-size: 40px;
+   margin-bottom: 20px;
+}
+form{
+   height: 420px;
+}
+#rounds{
+   position: absolute;
+   width: 100%;
+   color: white;
+   font-weight: 600;
+   font-size: 20px;
+   background-image: linear-gradient( 109.6deg,  rgba(118,12,99,1) 11.2%, rgba(71,11,75,1) 98.6% );
+   color: white;
+   padding: 5px 20px ;
+   border-radius: 0 0 10px 10px ;
+   left: 0;
+   bottom: -25px;
+}
+#win-msg{
+   display: none;
+}
+#total-value{
+   display: none;
+}
+
+/* GAME START CSS  */
+
+.start .container .right-container{
+   display: none;
+}
+.start .left-container{
+   position: absolute;
+   left: 33.5%;
+   top: 20%;
+   animation-name: start-play;
+   animation-duration: 0.5s;
+}
+.child.start .left-container{
+   display: flex;
+} 
+
+/* GAME END CSS */
+
+.child.end .right-container #final{
+   display: none;
+}
+.child.end  .right-container .display-box{
+   
+   top:20%;
+   height: 170px;
+   width: 300px;
+   font-size: 70px;
+   padding-top: 32px;
+   animation-name: display-box;
+   animation-duration: 0.5s;
+}
+.child.end  .right-container .display-box .player{
+   font-size: 23px;
+}
+
+.child.end  .right-container .display-box #rounds{
+   height: 60px;
+   font-size: 30px;
+   padding-top: 10px;
+}
+.child.end   .right-container #restart{
+   bottom: 0px;
+   left: 50%;
+   padding-top: 5px;
+   height: 50px;
+   width: 180px;
+   font-size: 25px;
+   display: block;
+   font-weight: 900;
+   bottom: 5%;
+   animation-name: restart-btn;
+   animation-duration: 0.5s;
+}
+
+.child.end  #win-msg{
+   color: white;
+   font-size: 39px;
+   position: absolute;
+   display: block;
+   left: 50%;
+   top:20%;
+   transform: translate(-50%,-50%);
+   font-weight: 600;
+   animation-name: start-anim;
+   animation-duration: 0.5s;
+}
+
+@keyframes start-anim{
+       from{
+        top: -10%;
+        opacity: 0;
+    }to{
+        top:20%;
+        opacity: 1;
+    }
+}
+
+@keyframes display-box{
+    from{
+        top:-30%;
+        opacity: 0;
+    }to{
+        top:20%;
+        opacity: 1;
+    }
+}
+
+@keyframes restart-btn{
+    from{
+        bottom: -15%;
+        opacity: 0;
+    }to{
+        bottom: 5%;
+        opacity: 1;
+    }
+}
+@keyframes start-play{
+    from{
+        left: -20%;
+        opacity: 0;
+    }to{
+        left: 33.5%;
+        top: 20%;
+        opacity: 1;
+    }
+}
+
+@keyframes containar-anim{
+    from{
+       
+       bottom: -500px;
+        opacity: 0;
+    }to{
+        bottom: 0px;
+        opacity: 1;
+    }
+}
+
+@keyframes choice-anim{
+    from{
+        top: -20%;
+        opacity: 0;
+    }to{
+        top: 22%;
+        opacity: 1;
+    }
+}
+@keyframes massage-anim{
+    from{
+        font-size: 0px;
+        opacity: 0;
+    }to{
+        font-size: 40px;
+        opacity: 1;
+    }
+}
